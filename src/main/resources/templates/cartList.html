@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <table>
+            <tr data-th-each="item: ${cartItems}">  <!-- This is the thymelead code for for-each loop -->
+
+            <!-- These 2 following codes are to display the item into each cells -->
+            <td data-th-text="${item.itemName}"></td> 
+            <td data-th-text = "${item.quantity}"></td>
+         </tr>
+            
+        </table>
+
+<br>
+        <table>
+            <tr data-th-each="item, stat: ${cartItems}">  
+            <td data-th-text="${stat.index+1}"></td>
+            <td data-th-text="${item.itemName}"></td> 
+            <td data-th-text = "${item.quantity}"></td>
+            <td data-th-text="${stat.first}"></td>
+            <td data-th-text="${stat.last}"></td>
+            <td data-th-text="${stat.even}"></td>
+         </tr>
+            
+        </table>
+
+    </body>
+</html>
